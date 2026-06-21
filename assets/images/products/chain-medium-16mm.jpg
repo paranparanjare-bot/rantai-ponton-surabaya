@@ -1,0 +1,27 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E2E8F0"/>
+      <stop offset="100%" style="stop-color:#CBD5E0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="300" fill="url(#bg2)"/>
+  
+  <!-- Medium chain links -->
+  <g stroke="#FF8C00" stroke-width="6" fill="none" stroke-linecap="round">
+    <ellipse cx="100" cy="150" rx="20" ry="25"/>
+    <ellipse cx="150" cy="150" rx="20" ry="25"/>
+    <ellipse cx="200" cy="150" rx="20" ry="25"/>
+    <ellipse cx="250" cy="150" rx="20" ry="25"/>
+    <ellipse cx="300" cy="150" rx="20" ry="25"/>
+  </g>
+  
+  <!-- Connecting line -->
+  <line x1="50" y1="150" x2="340" y2="150" stroke="#FF6B35" stroke-width="2"/>
+  
+  <!-- Dimension indicator -->
+  <text x="200" y="220" font-family="Arial" font-size="36" fill="#004E89" text-anchor="middle" font-weight="bold">16mm</text>
+  
+  <text x="200" y="280" font-family="Arial" font-size="14" fill="#718096" text-anchor="middle">Rantai Ponton Medium</text>
+</svg>

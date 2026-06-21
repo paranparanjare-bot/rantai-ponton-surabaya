@@ -1,0 +1,29 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#87CEEB"/><stop offset="100%" style="stop-color:#0FA3B1"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#g6)"/>
+  
+  <!-- Base platform -->
+  <rect x="100" y="180" width="200" height="50" fill="#8B7355" rx="3"/>
+  
+  <!-- Excavator cabin -->
+  <rect x="140" y="140" width="70" height="50" fill="#FF6B35" rx="3"/>
+  <rect x="150" y="150" width="15" height="15" fill="#87CEEB"/>
+  <rect x="170" y="150" width="15" height="15" fill="#87CEEB"/>
+  
+  <!-- Long arm boom (extended) -->
+  <g stroke="#FF6B35" stroke-width="8" fill="none" stroke-linecap="round">
+    <line x1="210" y1="140" x2="280" y2="80"/>
+    <line x1="280" y1="80" x2="340" y2="40"/>
+  </g>
+  
+  <!-- Bucket at end -->
+  <g fill="#8B7355" stroke="#654321" stroke-width="2">
+    <polygon points="340,40 370,40 365,65 335,65"/>
+  </g>
+  
+  <!-- Wheels -->
+  <circle cx="130" cy="230" r="10" fill="#333"/>
+  <circle cx="270" cy="230" r="10" fill="#333"/>
+  
+  <text x="200" y="280" font-family="Arial" font-size="12" fill="#004E89" text-anchor="middle" font-weight="bold">Excavator Long Arm</text>
+</svg>

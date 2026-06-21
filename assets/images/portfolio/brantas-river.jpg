@@ -1,0 +1,56 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0FA3B1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#006D77;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Water background -->
+  <rect width="800" height="600" fill="url(#water)"/>
+  
+  <!-- River waves -->
+  <path d="M0 200 Q100 180 200 200 T400 200 T600 200 T800 200" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <path d="M0 250 Q100 230 200 250 T400 250 T600 250 T800 250" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  
+  <!-- Excavator on pontoon working -->
+  <g>
+    <rect x="250" y="300" width="300" height="60" fill="#8B7355" rx="4"/>
+    <rect x="300" y="270" width="200" height="50" fill="#FF6B35" rx="4"/>
+    <rect x="320" y="230" width="80" height="50" fill="#FF6B35" rx="4"/>
+    
+    <!-- Boom digging -->
+    <g stroke="#FF6B35" stroke-width="10" fill="none">
+      <line x1="400" y1="230" x2="480" y2="180"/>
+      <line x1="480" y1="180" x2="550" y2="320"/>
+    </g>
+    
+    <!-- Bucket in water -->
+    <polygon points="550,320 580,320 575,340 545,340" fill="#8B7355" stroke="#654321" stroke-width="2"/>
+    
+    <!-- Water splash -->
+    <circle cx="565" cy="350" r="15" fill="rgba(255,255,255,0.5)"/>
+    <circle cx="555" cy="360" r="10" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="575" cy="360" r="10" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <!-- Riverbank -->
+  <path d="M0 400 Q100 390 200 400 L200 600 L0 600 Z" fill="#8B7355" opacity="0.7"/>
+  <path d="M600 400 Q700 390 800 400 L800 600 L600 600 Z" fill="#8B7355" opacity="0.7"/>
+  
+  <!-- Trees on bank -->
+  <g fill="#2D5016" opacity="0.6">
+    <circle cx="80" cy="420" r="30"/>
+    <circle cx="60" cy="435" r="25"/>
+    <circle cx="100" cy="435" r="25"/>
+    
+    <circle cx="680" cy="420" r="30"/>
+    <circle cx="660" cy="435" r="25"/>
+    <circle cx="700" cy="435" r="25"/>
+  </g>
+  
+  <!-- Title overlay -->
+  <rect x="50" y="520" width="400" height="60" fill="rgba(0,0,0,0.7)" rx="8"/>
+  <text x="70" y="545" font-family="Arial" font-size="20" fill="#F7B801" font-weight="bold">Normalisasi Sungai Brantas</text>
+  <text x="70" y="565" font-family="Arial" font-size="14" fill="white">Surabaya, Jawa Timur • 2024</text>
+</svg>

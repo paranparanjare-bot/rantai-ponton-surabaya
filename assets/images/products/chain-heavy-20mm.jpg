@@ -1,0 +1,28 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E2E8F0"/>
+      <stop offset="100%" style="stop-color:#CBD5E0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="300" fill="url(#bg1)"/>
+  
+  <!-- Heavy duty chain links -->
+  <g stroke="#FFD700" stroke-width="8" fill="none" stroke-linecap="round">
+    <ellipse cx="80" cy="150" rx="25" ry="30"/>
+    <ellipse cx="130" cy="150" rx="25" ry="30"/>
+    <ellipse cx="180" cy="150" rx="25" ry="30"/>
+    <ellipse cx="230" cy="150" rx="25" ry="30"/>
+    <ellipse cx="280" cy="150" rx="25" ry="30"/>
+    <ellipse cx="330" cy="150" rx="25" ry="30"/>
+  </g>
+  
+  <!-- Connecting line -->
+  <line x1="40" y1="150" x2="360" y2="150" stroke="#FF6B35" stroke-width="3"/>
+  
+  <!-- Dimension indicator -->
+  <text x="200" y="220" font-family="Arial" font-size="36" fill="#004E89" text-anchor="middle" font-weight="bold">20mm</text>
+  
+  <text x="200" y="280" font-family="Arial" font-size="14" fill="#718096" text-anchor="middle">Rantai Ponton Heavy Duty</text>
+</svg>

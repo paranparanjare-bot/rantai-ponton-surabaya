@@ -1,0 +1,18 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="#FF6B35"/>
+  
+  <!-- Chain Link -->
+  <g fill="none" stroke="white" stroke-width="6" stroke-linecap="round">
+    <!-- Left Link -->
+    <ellipse cx="35" cy="50" rx="15" ry="20"/>
+    <!-- Right Link -->
+    <ellipse cx="65" cy="50" rx="15" ry="20"/>
+  </g>
+  
+  <!-- Center Dot -->
+  <circle cx="50" cy="50" r="6" fill="white"/>
+  
+  <!-- Bottom Wave -->
+  <path d="M10 75 Q 30 65 50 75 T 90 75" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>

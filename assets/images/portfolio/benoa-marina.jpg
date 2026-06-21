@@ -1,0 +1,82 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tropical" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0FA3B1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00B4D8;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Tropical sea -->
+  <rect width="800" height="600" fill="url(#tropical)"/>
+  
+  <!-- Sky -->
+  <rect width="800" height="250" fill="#87CEEB"/>
+  
+  <!-- Sun -->
+  <circle cx="700" cy="100" r="50" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Marina pontoon structure -->
+  <g>
+    <!-- Main walkway -->
+    <rect x="100" y="280" width="600" height="50" fill="#8B7355" rx="6"/>
+    <rect x="100" y="280" width="600" height="12" fill="#A0826D" rx="6"/>
+    
+    <!-- Finger docks -->
+    <rect x="180" y="330" width="40" height="120" fill="#8B7355" rx="4"/>
+    <rect x="180" y="330" width="40" height="10" fill="#A0826D" rx="4"/>
+    
+    <rect x="320" y="330" width="40" height="120" fill="#8B7355" rx="4"/>
+    <rect x="320" y="330" width="40" height="10" fill="#A0826D" rx="4"/>
+    
+    <rect x="460" y="330" width="40" height="120" fill="#8B7355" rx="4"/>
+    <rect x="460" y="330" width="40" height="10" fill="#A0826D" rx="4"/>
+    
+    <rect x="600" y="330" width="40" height="120" fill="#8B7355" rx="4"/>
+    <rect x="600" y="330" width="40" height="10" fill="#A0826D" rx="4"/>
+  </g>
+  
+  <!-- Yachts berthed -->
+  <g>
+    <!-- Yacht 1 -->
+    <ellipse cx="200" cy="400" rx="25" ry="50" fill="#FFFFFF"/>
+    <line x1="200" y1="360" x2="200" y2="320" stroke="#333" stroke-width="2"/>
+    
+    <!-- Yacht 2 -->
+    <ellipse cx="340" cy="400" rx="25" ry="50" fill="#E8E8E8"/>
+    <line x1="340" y1="360" x2="340" y2="320" stroke="#333" stroke-width="2"/>
+    
+    <!-- Yacht 3 -->
+    <ellipse cx="480" cy="400" rx="25" ry="50" fill="#FFFFFF"/>
+    <line x1="480" y1="360" x2="480" y2="320" stroke="#333" stroke-width="2"/>
+    
+    <!-- Yacht 4 -->
+    <ellipse cx="620" cy="400" rx="25" ry="50" fill="#E8E8E8"/>
+    <line x1="620" y1="360" x2="620" y2="320" stroke="#333" stroke-width="2"/>
+  </g>
+  
+  <!-- Chains and mooring -->
+  <g stroke="#FFD700" stroke-width="3" fill="none">
+    <line x1="150" y1="280" x2="100" y2="200"/>
+    <line x1="400" y1="280" x2="400" y2="200"/>
+    <line x1="650" y1="280" x2="700" y2="200"/>
+    <circle cx="100" cy="190" r="8"/>
+    <circle cx="400" cy="190" r="8"/>
+    <circle cx="700" cy="190" r="8"/>
+  </g>
+  
+  <!-- Palm trees on shore -->
+  <g fill="#2D5016" opacity="0.7">
+    <rect x="45" y="290" width="8" height="40" fill="#654321"/>
+    <circle cx="49" cy="275" r="20"/>
+    <ellipse cx="35" cy="280" rx="15" ry="8" transform="rotate(-30 35 280)"/>
+    <ellipse cx="63" cy="280" rx="15" ry="8" transform="rotate(30 63 280)"/>
+  </g>
+  
+  <!-- Water reflections -->
+  <ellipse cx="400" cy="500" rx="200" ry="20" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Title overlay -->
+  <rect x="50" y="520" width="380" height="60" fill="rgba(0,0,0,0.7)" rx="8"/>
+  <text x="70" y="545" font-family="Arial" font-size="20" fill="#F7B801" font-weight="bold">Marina Apung Benoa</text>
+  <text x="70" y="565" font-family="Arial" font-size="14" fill="white">Benoa, Bali • 2025</text>
+</svg>

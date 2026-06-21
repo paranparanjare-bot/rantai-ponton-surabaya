@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E2E8F0"/><stop offset="100%" style="stop-color:#CBD5E0"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#g7)"/>
+  
+  <!-- Track pad rubber showing texture -->
+  <rect x="80" y="100" width="240" height="120" fill="#333" rx="8" stroke="#666" stroke-width="2"/>
+  
+  <!-- Tread pattern -->
+  <g stroke="#555" stroke-width="2" fill="none">
+    <rect x="100" y="120" width="30" height="20"/>
+    <rect x="140" y="120" width="30" height="20"/>
+    <rect x="180" y="120" width="30" height="20"/>
+    <rect x="220" y="120" width="30" height="20"/>
+    
+    <rect x="100" y="150" width="30" height="20"/>
+    <rect x="140" y="150" width="30" height="20"/>
+    <rect x="180" y="150" width="30" height="20"/>
+    <rect x="220" y="150" width="30" height="20"/>
+  </g>
+  
+  <!-- Shiny highlight -->
+  <ellipse cx="200" cy="130" rx="80" ry="40" fill="white" opacity="0.1"/>
+  
+  <text x="200" y="270" font-family="Arial" font-size="12" fill="#004E89" text-anchor="middle" font-weight="bold">Track Pad Rubber</text>
+</svg>

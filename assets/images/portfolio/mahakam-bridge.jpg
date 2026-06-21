@@ -1,0 +1,77 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="river2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#006D77;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#004E89;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- River background -->
+  <rect width="800" height="600" fill="url(#river2)"/>
+  
+  <!-- Sky -->
+  <rect width="800" height="300" fill="#87CEEB" opacity="0.7"/>
+  
+  <!-- Clouds -->
+  <ellipse cx="150" cy="80" rx="60" ry="30" fill="white" opacity="0.8"/>
+  <ellipse cx="650" cy="120" rx="70" ry="35" fill="white" opacity="0.8"/>
+  
+  <!-- Pontoon bridge modules connected -->
+  <g>
+    <!-- Module 1 -->
+    <rect x="50" y="280" width="120" height="50" fill="#8B7355" rx="4"/>
+    <rect x="50" y="280" width="120" height="12" fill="#A0826D"/>
+    
+    <!-- Module 2 -->
+    <rect x="170" y="285" width="120" height="50" fill="#8B7355" rx="4"/>
+    <rect x="170" y="285" width="120" height="12" fill="#A0826D"/>
+    
+    <!-- Module 3 -->
+    <rect x="290" y="290" width="120" height="50" fill="#8B7355" rx="4"/>
+    <rect x="290" y="290" width="120" height="12" fill="#A0826D"/>
+    
+    <!-- Module 4 -->
+    <rect x="410" y="285" width="120" height="50" fill="#8B7355" rx="4"/>
+    <rect x="410" y="285" width="120" height="12" fill="#A0826D"/>
+    
+    <!-- Module 5 -->
+    <rect x="530" y="280" width="120" height="50" fill="#8B7355" rx="4"/>
+    <rect x="530" y="280" width="120" height="12" fill="#A0826D"/>
+    
+    <!-- Module 6 -->
+    <rect x="650" y="280" width="120" height="50" fill="#8B7355" rx="4"/>
+    <rect x="650" y="280" width="120" height="12" fill="#A0826D"/>
+  </g>
+  
+  <!-- Chains anchoring along the bridge -->
+  <g stroke="#FFD700" stroke-width="3" fill="none">
+    <line x1="110" y1="280" x2="110" y2="220"/>
+    <line x1="350" y1="290" x2="350" y2="230"/>
+    <line x1="590" y1="280" x2="590" y2="220"/>
+    <circle cx="110" cy="210" r="8"/>
+    <circle cx="350" cy="220" r="8"/>
+    <circle cx="590" cy="210" r="8"/>
+  </g>
+  
+  <!-- Vehicles on bridge -->
+  <rect x="200" y="265" width="40" height="20" fill="#FF6B35" rx="2"/>
+  <circle cx="210" cy="285" r="5" fill="#333"/>
+  <circle cx="230" cy="285" r="5" fill="#333"/>
+  
+  <rect x="480" y="265" width="40" height="20" fill="#004E89" rx="2"/>
+  <circle cx="490" cy="285" r="5" fill="#333"/>
+  <circle cx="510" cy="285" r="5" fill="#333"/>
+  
+  <!-- Banks on sides -->
+  <path d="M0 330 L0 600 L100 600 L100 350 Z" fill="#8B7355" opacity="0.6"/>
+  <path d="M700 350 L700 600 L800 600 L800 330 Z" fill="#8B7355" opacity="0.6"/>
+  
+  <!-- Trees -->
+  <circle cx="50" cy="360" r="25" fill="#2D5016" opacity="0.7"/>
+  <circle cx="750" cy="360" r="25" fill="#2D5016" opacity="0.7"/>
+  
+  <!-- Title overlay -->
+  <rect x="50" y="520" width="450" height="60" fill="rgba(0,0,0,0.7)" rx="8"/>
+  <text x="70" y="545" font-family="Arial" font-size="20" fill="#F7B801" font-weight="bold">Jembatan Ponton Mahakam</text>
+  <text x="70" y="565" font-family="Arial" font-size="14" fill="white">Samarinda, Kalimantan Timur • 2024</text>
+</svg>
