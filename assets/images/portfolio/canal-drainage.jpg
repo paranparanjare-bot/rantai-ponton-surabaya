@@ -1,82 +1,16 @@
 <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="canal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2D5016;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#4A5568;stop-opacity:1"/>
-    </linearGradient>
-  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="#E2E8F0"/>
   
-  <!-- Urban background -->
-  <rect width="800" height="600" fill="#CBD5E0"/>
-  
-  <!-- City buildings in background -->
-  <g fill="#718096" opacity="0.5">
-    <rect x="50" y="100" width="80" height="150"/>
-    <rect x="150" y="120" width="60" height="130"/>
-    <rect x="230" y="90" width="70" height="160"/>
-    <rect x="520" y="110" width="90" height="140"/>
-    <rect x="630" y="95" width="75" height="155"/>
-    <rect x="720" y="115" width="70" height="135"/>
+  <!-- Placeholder Icon -->
+  <g transform="translate(350, 250)">
+    <!-- Image Icon -->
+    <rect x="0" y="0" width="100" height="80" rx="8" fill="#A0AEC0"/>
+    <circle cx="30" cy="25" r="12" fill="#CBD5E0"/>
+    <polygon points="15,65 45,40 75,65" fill="#CBD5E0"/>
+    <polygon points="55,65 75,45 95,65" fill="#CBD5E0"/>
   </g>
   
-  <!-- Canal water (dirty/murky) -->
-  <rect x="0" y="300" width="800" height="300" fill="url(#canal)"/>
-  
-  <!-- Canal walls concrete -->
-  <rect x="0" y="280" width="150" height="320" fill="#A0AEC0"/>
-  <rect x="650" y="280" width="150" height="320" fill="#A0AEC0"/>
-  
-  <!-- Excavator with long arm on pontoon -->
-  <g>
-    <!-- Pontoon platform -->
-    <rect x="250" y="340" width="300" height="60" fill="#8B7355" rx="4"/>
-    <rect x="250" y="340" width="300" height="15" fill="#A0826D"/>
-    
-    <!-- Excavator base -->
-    <rect x="300" y="310" width="200" height="50" fill="#FF6B35" rx="4"/>
-    <rect x="320" y="270" width="80" height="50" fill="#FF6B35" rx="4"/>
-    
-    <!-- Windows -->
-    <rect x="330" y="280" width="20" height="20" fill="#87CEEB"/>
-    <rect x="360" y="280" width="20" height="20" fill="#87CEEB"/>
-    
-    <!-- Long boom arm extended -->
-    <g stroke="#FF6B35" stroke-width="12" fill="none" stroke-linecap="round">
-      <line x1="400" y1="270" x2="500" y2="200"/>
-      <line x1="500" y1="200" x2="600" y2="150"/>
-      <line x1="600" y1="150" x2="680" y2="380"/>
-    </g>
-    
-    <!-- Bucket removing sediment -->
-    <polygon points="680,380 715,380 710,410 675,410" fill="#8B7355" stroke="#654321" stroke-width="2"/>
-    
-    <!-- Sediment being removed -->
-    <circle cx="695" cy="400" r="15" fill="rgba(77,80,33,0.6)"/>
-    <circle cx="685" cy="410" r="12" fill="rgba(77,80,33,0.5)"/>
-    <circle cx="705" cy="410" r="12" fill="rgba(77,80,33,0.5)"/>
-  </g>
-  
-  <!-- Chains anchoring -->
-  <g stroke="#FFD700" stroke-width="4" fill="none">
-    <line x1="280" y1="340" x2="200" y2="280"/>
-    <line x1="520" y1="340" x2="600" y2="280"/>
-    <circle cx="200" cy="270" r="8"/>
-    <circle cx="600" cy="270" r="8"/>
-  </g>
-  
-  <!-- Workers on canal edge -->
-  <g fill="#004E89">
-    <ellipse cx="170" cy="280" rx="8" ry="15"/>
-    <circle cx="170" cy="265" r="6" fill="#FFA07A"/>
-  </g>
-  
-  <!-- Bridge over canal -->
-  <rect x="0" y="230" width="800" height="20" fill="#718096" opacity="0.7"/>
-  <rect x="350" y="250" width="30" height="30" fill="#718096" opacity="0.7"/>
-  <rect x="420" y="250" width="30" height="30" fill="#718096" opacity="0.7"/>
-  
-  <!-- Title overlay -->
-  <rect x="50" y="520" width="400" height="60" fill="rgba(0,0,0,0.7)" rx="8"/>
-  <text x="70" y="545" font-family="Arial" font-size="20" fill="#F7B801" font-weight="bold">Kanal Drainase Kota</text>
-  <text x="70" y="565" font-family="Arial" font-size="14" fill="white">Semarang, Jawa Tengah • 2024</text>
+  <!-- Text -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" fill="#718096" text-anchor="middle">Image Placeholder</text>
 </svg>

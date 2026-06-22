@@ -1,64 +1,16 @@
 <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="pond" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4A5568;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#2D3748;stop-opacity:1"/>
-    </linearGradient>
-  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="#E2E8F0"/>
   
-  <!-- Dark water pond -->
-  <rect width="800" height="600" fill="url(#pond)"/>
-  
-  <!-- Mining site background hills -->
-  <path d="M0 200 Q200 150 400 180 T800 160 L800 400 L0 400 Z" fill="#718096" opacity="0.5"/>
-  
-  <!-- Retention pond edge -->
-  <ellipse cx="400" cy="400" rx="350" ry="180" fill="#1A202C" opacity="0.8"/>
-  
-  <!-- Excavator on pontoon working -->
-  <g>
-    <!-- Pontoon platform -->
-    <rect x="250" y="320" width="300" height="60" fill="#8B7355" rx="4"/>
-    <rect x="250" y="320" width="300" height="15" fill="#A0826D"/>
-    
-    <!-- Excavator body -->
-    <rect x="300" y="290" width="200" height="50" fill="#FF6B35" rx="4"/>
-    <rect x="320" y="250" width="80" height="50" fill="#FF6B35" rx="4"/>
-    <rect x="330" y="260" width="20" height="20" fill="#87CEEB"/>
-    <rect x="360" y="260" width="20" height="20" fill="#87CEEB"/>
-    
-    <!-- Boom arm digging -->
-    <g stroke="#FF6B35" stroke-width="12" fill="none" stroke-linecap="round">
-      <line x1="400" y1="250" x2="480" y2="200"/>
-      <line x1="480" y1="200" x2="550" y2="360"/>
-    </g>
-    
-    <!-- Bucket in water -->
-    <polygon points="550,360 585,360 580,385 545,385" fill="#8B7355" stroke="#654321" stroke-width="2"/>
-    
-    <!-- Sediment splash -->
-    <circle cx="565" cy="390" r="20" fill="rgba(139,115,85,0.5)"/>
-    <circle cx="550" cy="400" r="15" fill="rgba(139,115,85,0.4)"/>
-    <circle cx="580" cy="400" r="15" fill="rgba(139,115,85,0.4)"/>
+  <!-- Placeholder Icon -->
+  <g transform="translate(350, 250)">
+    <!-- Image Icon -->
+    <rect x="0" y="0" width="100" height="80" rx="8" fill="#A0AEC0"/>
+    <circle cx="30" cy="25" r="12" fill="#CBD5E0"/>
+    <polygon points="15,65 45,40 75,65" fill="#CBD5E0"/>
+    <polygon points="55,65 75,45 95,65" fill="#CBD5E0"/>
   </g>
   
-  <!-- Chains anchoring -->
-  <g stroke="#FFD700" stroke-width="4" fill="none">
-    <line x1="280" y1="320" x2="220" y2="250"/>
-    <line x1="520" y1="320" x2="580" y2="250"/>
-    <circle cx="220" cy="240" r="8"/>
-    <circle cx="580" cy="240" r="8"/>
-  </g>
-  
-  <!-- Mining trucks in background -->
-  <g fill="#FFD700" opacity="0.6">
-    <rect x="100" y="240" width="50" height="30" rx="4"/>
-    <circle cx="115" cy="270" r="8" fill="#333"/>
-    <circle cx="135" cy="270" r="8" fill="#333"/>
-  </g>
-  
-  <!-- Title overlay -->
-  <rect x="50" y="520" width="420" height="60" fill="rgba(0,0,0,0.7)" rx="8"/>
-  <text x="70" y="545" font-family="Arial" font-size="20" fill="#F7B801" font-weight="bold">Pengerukan Kolam Retensi</text>
-  <text x="70" y="565" font-family="Arial" font-size="14" fill="white">Sangatta, Kalimantan Timur • 2023</text>
+  <!-- Text -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" fill="#718096" text-anchor="middle">Image Placeholder</text>
 </svg>
