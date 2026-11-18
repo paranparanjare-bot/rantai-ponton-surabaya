@@ -4,7 +4,7 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-Sitemap: https://stevenrantaiponton.com/sitemap.xml
+Sitemap: https://rantaiponton.web.id/sitemap.xml
 
 # Google
 User-agent: Googlebot
@@ -16,3 +16,34 @@ Allow: /
 
 # Crawl delay
 Crawl-delay: 1
+
+# AI search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /

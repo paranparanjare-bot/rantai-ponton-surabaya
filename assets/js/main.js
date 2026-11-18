@@ -105,7 +105,7 @@
 
         card.innerHTML = `
             <div class="product-image">
-                <img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
+                <img src="${product.image}" alt="${product.alt || product.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
                 ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
             </div>
             <div class="product-name">${product.title}</div>
@@ -153,7 +153,7 @@
 
         const img = productModal.querySelector('.brochure-image img');
         img.src = product.image;
-        img.alt = product.title;
+        img.alt = product.alt || product.title;
         img.onerror = function() { this.src = 'assets/images/placeholder.jpg'; };
 
         productModal.querySelector('.brochure-category').textContent = product.categoryName;
@@ -239,7 +239,7 @@
         
         card.innerHTML = `
             <div class="portfolio-image">
-                <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
+                <img src="${item.image}" alt="${item.alt || item.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
             </div>
             <div class="portfolio-overlay">
                 <div class="portfolio-category">${item.category}</div>
