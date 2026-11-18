@@ -62,84 +62,150 @@
     });
 
     // ========================================
-    // Products
+    // Products — Galeri model buku brosur
     // ========================================
-    
+
     const productsGrid = document.getElementById('productsGrid');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    
-    // Render products
+    const productModal = document.getElementById('productModal');
+
+    // Daftar produk yang sedang tampil (mengikuti filter aktif)
+    let currentProducts = productsData.slice();
+    let currentIndex = 0;
+
+    // Render galeri ringkas: thumbnail foto + nama saja
     function renderProducts(filter = 'all') {
         if (!productsGrid) return;
-        
-        const filteredProducts = filter === 'all' 
-            ? productsData 
+
+        currentProducts = filter === 'all'
+            ? productsData.slice()
             : productsData.filter(product => product.category === filter);
-        
+
         productsGrid.innerHTML = '';
-        
-        filteredProducts.forEach((product, index) => {
-            const productCard = createProductCard(product);
+
+        currentProducts.forEach((product, index) => {
+            const productCard = createProductCard(product, index);
             productsGrid.appendChild(productCard);
-            
+
             // Stagger animation
             setTimeout(() => {
                 productCard.classList.add('fade-in');
             }, index * 100);
         });
     }
-    
-    // Create product card
-    function createProductCard(product) {
+
+    // Create product thumbnail card (foto + nama)
+    function createProductCard(product, index) {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.dataset.category = product.category;
-        
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', 'Lihat detail ' + product.title);
+
         card.innerHTML = `
             <div class="product-image">
                 <img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
                 ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
             </div>
-            <div class="product-content">
-                <div class="product-category">${product.categoryName}</div>
-                <h3 class="product-title">${product.title}</h3>
-                <p class="product-description">${product.description}</p>
-                
-                <div class="product-specs">
-                    ${Object.entries(product.specs).map(([label, value]) => `
-                        <div class="spec-item">
-                            <span class="spec-label">${label}</span>
-                            <span class="spec-value">${value}</span>
-                        </div>
-                    `).join('')}
-                </div>
-                
-                <div class="product-footer">
-                    <div>
-                        <div class="product-price">${product.price}</div>
-                        <div class="product-price-label">${product.priceLabel}</div>
-                    </div>
-                    <a href="#contact" class="product-cta">Pesan Sekarang</a>
-                </div>
-            </div>
+            <div class="product-name">${product.title}</div>
         `;
-        
+
+        card.addEventListener('click', () => openBrochure(index));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openBrochure(index);
+            }
+        });
+
         return card;
     }
-    
+
+    // ---- Halaman brosur (modal detail produk) ----
+
+    function openBrochure(index) {
+        if (!productModal || !currentProducts.length) return;
+        currentIndex = index;
+        renderBrochure();
+        productModal.hidden = false;
+        document.body.classList.add('modal-open');
+        const closeBtn = productModal.querySelector('.brochure-close');
+        if (closeBtn) closeBtn.focus();
+    }
+
+    function closeBrochure() {
+        if (!productModal) return;
+        productModal.hidden = true;
+        document.body.classList.remove('modal-open');
+    }
+
+    function brochureStep(delta) {
+        const next = currentIndex + delta;
+        if (next < 0 || next >= currentProducts.length) return;
+        currentIndex = next;
+        renderBrochure();
+    }
+
+    function renderBrochure() {
+        const product = currentProducts[currentIndex];
+        if (!product) return;
+
+        const img = productModal.querySelector('.brochure-image img');
+        img.src = product.image;
+        img.alt = product.title;
+        img.onerror = function() { this.src = 'assets/images/placeholder.jpg'; };
+
+        productModal.querySelector('.brochure-category').textContent = product.categoryName;
+        productModal.querySelector('.brochure-title').textContent = product.title;
+        productModal.querySelector('.brochure-description').textContent = product.description;
+
+        const specsEl = productModal.querySelector('.brochure-specs');
+        specsEl.innerHTML = Object.entries(product.specs).map(([label, value]) => `
+            <div class="spec-item">
+                <span class="spec-label">${label}</span>
+                <span class="spec-value">${value}</span>
+            </div>
+        `).join('');
+
+        const waMessage = encodeURIComponent('Halo, saya mau tanya harga ' + product.title);
+        productModal.querySelector('.brochure-wa').href =
+            'https://wa.me/6285856457677?text=' + waMessage;
+
+        productModal.querySelector('.brochure-page').textContent =
+            'Halaman ' + (currentIndex + 1) + ' dari ' + currentProducts.length;
+
+        productModal.querySelector('.brochure-prev').disabled = currentIndex === 0;
+        productModal.querySelector('.brochure-next').disabled =
+            currentIndex === currentProducts.length - 1;
+    }
+
+    if (productModal) {
+        productModal.querySelector('.brochure-close').addEventListener('click', closeBrochure);
+        productModal.querySelector('.brochure-backdrop').addEventListener('click', closeBrochure);
+        productModal.querySelector('.brochure-prev').addEventListener('click', () => brochureStep(-1));
+        productModal.querySelector('.brochure-next').addEventListener('click', () => brochureStep(1));
+        document.addEventListener('keydown', (e) => {
+            if (productModal.hidden) return;
+            if (e.key === 'Escape') closeBrochure();
+            if (e.key === 'ArrowLeft') brochureStep(-1);
+            if (e.key === 'ArrowRight') brochureStep(1);
+        });
+    }
+
     // Filter products
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Update active state
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            
+
             // Filter and render
             const filter = button.dataset.filter;
             renderProducts(filter);
         });
     });
-    
+
     // Initial render
     renderProducts();
 

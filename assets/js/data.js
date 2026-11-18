@@ -9,7 +9,7 @@ const productsData = [
         categoryName: 'Rantai Ponton',
         title: 'Rantai Ponton Heavy Duty 20mm',
         description: 'Rantai ponton berkualitas tinggi dengan diameter 20mm, tahan korosi dan beban ekstrem.',
-        image: 'assets/images/products/chain-heavy-20mm.jpg',
+        image: 'assets/images/products/chain-heavy-20mm.webp',
         badge: 'Best Seller',
         specs: {
             'Diameter': '20mm',
@@ -17,8 +17,6 @@ const productsData = [
             'Beban Maks': '5000 kg',
             'Panjang': 'Custom'
         },
-        price: 'Rp 850.000',
-        priceLabel: 'per meter'
     },
     {
         id: 2,
@@ -26,7 +24,7 @@ const productsData = [
         categoryName: 'Rantai Ponton',
         title: 'Rantai Ponton Medium 16mm',
         description: 'Rantai standar untuk ponton menengah dengan ketahanan optimal terhadap air laut.',
-        image: 'assets/images/products/chain-medium-16mm.jpg',
+        image: 'assets/images/products/chain-medium-16mm.webp',
         badge: 'Ready Stock',
         specs: {
             'Diameter': '16mm',
@@ -34,8 +32,6 @@ const productsData = [
             'Beban Maks': '3500 kg',
             'Panjang': 'Custom'
         },
-        price: 'Rp 650.000',
-        priceLabel: 'per meter'
     },
     {
         id: 3,
@@ -43,7 +39,7 @@ const productsData = [
         categoryName: 'Rantai Ponton',
         title: 'Rantai Ponton Light 13mm',
         description: 'Rantai ringan untuk ponton kecil dan boat dock dengan daya tahan tinggi.',
-        image: 'assets/images/products/chain-light-13mm.jpg',
+        image: 'assets/images/products/chain-light-13mm.webp',
         badge: 'Ekonomis',
         specs: {
             'Diameter': '13mm',
@@ -51,8 +47,6 @@ const productsData = [
             'Beban Maks': '2000 kg',
             'Panjang': 'Custom'
         },
-        price: 'Rp 450.000',
-        priceLabel: 'per meter'
     },
     {
         id: 4,
@@ -60,7 +54,7 @@ const productsData = [
         categoryName: 'Excavator Amphibi',
         title: 'Ponton Excavator 7x14m',
         description: 'Platform ponton ukuran besar untuk excavator hingga 20 ton, dilengkapi sistem anchoring.',
-        image: 'assets/images/products/pontoon-excavator-7x14.jpg',
+        image: 'assets/images/products/pontoon-excavator-7x14.webp',
         badge: 'Premium',
         specs: {
             'Ukuran': '7m x 14m',
@@ -68,8 +62,6 @@ const productsData = [
             'Material': 'Steel Frame',
             'Sistem': 'Chain Anchoring'
         },
-        price: 'Rp 285.000.000',
-        priceLabel: 'per unit'
     },
     {
         id: 5,
@@ -77,7 +69,7 @@ const productsData = [
         categoryName: 'Excavator Amphibi',
         title: 'Ponton Excavator 7x10m',
         description: 'Platform ponton standar untuk excavator menengah, ideal untuk normalisasi sungai.',
-        image: 'assets/images/products/pontoon-excavator-7x10.jpg',
+        image: 'assets/images/products/pontoon-excavator-7x10.webp',
         badge: 'Best Seller',
         specs: {
             'Ukuran': '7m x 10m',
@@ -85,8 +77,6 @@ const productsData = [
             'Material': 'Steel Frame',
             'Sistem': 'Chain Anchoring'
         },
-        price: 'Rp 195.000.000',
-        priceLabel: 'per unit'
     },
     {
         id: 6,
@@ -94,7 +84,7 @@ const productsData = [
         categoryName: 'Excavator Amphibi',
         title: 'Excavator Long Arm Amphibi',
         description: 'Excavator amphibi dengan long arm untuk pengerukan dalam dan jangkauan luas.',
-        image: 'assets/images/products/excavator-long-arm.jpg',
+        image: 'assets/images/products/excavator-long-arm.webp',
         badge: 'New',
         specs: {
             'Jangkauan': '18 meter',
@@ -102,8 +92,6 @@ const productsData = [
             'Engine': '120 HP',
             'Sistem': 'Full Amphibious'
         },
-        price: 'Rp 1.850.000.000',
-        priceLabel: 'per unit'
     },
     {
         id: 7,
@@ -111,7 +99,7 @@ const productsData = [
         categoryName: 'Suku Cadang',
         title: 'Track Pad Rubber Tractor',
         description: 'Karet track pad untuk tractor roda 4, tahan aus dan meningkatkan traksi.',
-        image: 'assets/images/products/track-pad-rubber.jpg',
+        image: 'assets/images/products/track-pad-rubber.webp',
         badge: 'Ready Stock',
         specs: {
             'Kompatibel': 'R4 Tractor',
@@ -119,8 +107,6 @@ const productsData = [
             'Ketebalan': '25mm',
             'Warranty': '6 bulan'
         },
-        price: 'Rp 2.500.000',
-        priceLabel: 'per set'
     },
     {
         id: 8,
@@ -128,7 +114,7 @@ const productsData = [
         categoryName: 'Suku Cadang',
         title: 'Shackle Connector 25mm',
         description: 'Penghubung rantai berkualitas tinggi untuk sistem anchoring ponton.',
-        image: 'assets/images/products/shackle-25mm.jpg',
+        image: 'assets/images/products/shackle-25mm.webp',
         badge: 'Ready Stock',
         specs: {
             'Ukuran': '25mm',
@@ -136,8 +122,6 @@ const productsData = [
             'Beban Kerja': '6 ton',
             'Standard': 'ISO 2415'
         },
-        price: 'Rp 175.000',
-        priceLabel: 'per pcs'
     },
     {
         id: 9,
@@ -145,7 +129,7 @@ const productsData = [
         categoryName: 'Suku Cadang',
         title: 'Concrete Anchor 1000kg',
         description: 'Anchor beton untuk sistem mooring ponton dengan daya tahan ekstrem.',
-        image: 'assets/images/products/concrete-anchor-1000kg.jpg',
+        image: 'assets/images/products/concrete-anchor-1000kg.webp',
         badge: 'Heavy Duty',
         specs: {
             'Berat': '1000 kg',
@@ -153,8 +137,6 @@ const productsData = [
             'Loop': '2 x 18mm',
             'Aplikasi': 'Boat Pontoon'
         },
-        price: 'Rp 3.250.000',
-        priceLabel: 'per unit'
     }
 ];
 
@@ -170,7 +152,7 @@ const portfolioData = [
         description: 'Proyek pengerukan dan normalisasi sungai menggunakan excavator amphibi dengan ponton 7x14m.',
         location: 'Surabaya, Jawa Timur',
         year: '2024',
-        image: 'assets/images/portfolio/brantas-river.jpg'
+        image: 'assets/images/portfolio/brantas-river.webp'
     },
     {
         id: 2,
@@ -179,7 +161,7 @@ const portfolioData = [
         description: 'Instalasi rantai ponton heavy duty untuk dermaga apung kapasitas 50 ton.',
         location: 'Surabaya, Jawa Timur',
         year: '2023',
-        image: 'assets/images/portfolio/tanjung-perak.jpg'
+        image: 'assets/images/portfolio/tanjung-perak.webp'
     },
     {
         id: 3,
@@ -188,7 +170,7 @@ const portfolioData = [
         description: 'Pembuatan dan instalasi jembatan ponton permanen dengan sistem chain anchoring.',
         location: 'Samarinda, Kalimantan Timur',
         year: '2024',
-        image: 'assets/images/portfolio/mahakam-bridge.jpg'
+        image: 'assets/images/portfolio/mahakam-bridge.webp'
     },
     {
         id: 4,
@@ -197,7 +179,7 @@ const portfolioData = [
         description: 'Penyediaan excavator amphibi untuk proyek pengerukan kolam tambang batubara.',
         location: 'Sangatta, Kalimantan Timur',
         year: '2023',
-        image: 'assets/images/portfolio/retention-pond.jpg'
+        image: 'assets/images/portfolio/retention-pond.webp'
     },
     {
         id: 5,
@@ -206,7 +188,7 @@ const portfolioData = [
         description: 'Sistem rantai ponton dan mooring untuk marina yacht dengan 20 berth.',
         location: 'Benoa, Bali',
         year: '2025',
-        image: 'assets/images/portfolio/benoa-marina.jpg'
+        image: 'assets/images/portfolio/benoa-marina.webp'
     },
     {
         id: 6,
@@ -215,7 +197,7 @@ const portfolioData = [
         description: 'Normalisasi kanal menggunakan excavator long arm amphibi.',
         location: 'Semarang, Jawa Tengah',
         year: '2024',
-        image: 'assets/images/portfolio/canal-drainage.jpg'
+        image: 'assets/images/portfolio/canal-drainage.webp'
     }
 ];
 

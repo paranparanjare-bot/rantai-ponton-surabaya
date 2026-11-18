@@ -699,8 +699,8 @@ section {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 .product-card {
@@ -708,19 +708,22 @@ section {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    cursor: pointer;
     transition: all var(--transition-base);
 }
 
-.product-card:hover {
-    transform: translateY(-8px);
+.product-card:hover,
+.product-card:focus-visible {
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary);
+    outline: none;
 }
 
 .product-image {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 180px;
     background: var(--bg-secondary);
     overflow: hidden;
 }
@@ -733,13 +736,13 @@ section {
 }
 
 .product-card:hover .product-image img {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .product-badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
     padding: 0.375rem 0.75rem;
     background: var(--accent);
     color: var(--text-primary);
@@ -748,88 +751,185 @@ section {
     font-weight: 700;
 }
 
-.product-content {
-    padding: 1.5rem;
+.product-name {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
 }
 
-.product-category {
+/* ========================================
+   Product Brochure Modal (halaman brosur)
+   ======================================== */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.brochure-modal[hidden] {
+    display: none;
+}
+
+.brochure-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.brochure-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 46, 0.75);
+}
+
+.brochure-sheet {
+    position: relative;
+    width: 100%;
+    max-width: 920px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.brochure-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.brochure-image {
+    background: var(--bg-secondary);
+    min-height: 320px;
+}
+
+.brochure-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brochure-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.brochure-category {
     font-size: 0.875rem;
     color: var(--primary);
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.product-title {
-    font-size: 1.25rem;
+.brochure-title {
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
     color: var(--text-primary);
+    margin-bottom: 0.75rem;
 }
 
-.product-description {
+.brochure-description {
     font-size: 0.95rem;
     color: var(--text-secondary);
-    margin-bottom: 1rem;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
-.product-specs {
+.brochure-specs {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 1rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
 }
 
-.spec-item {
+.brochure-specs .spec-item {
     display: flex;
     justify-content: space-between;
     font-size: 0.875rem;
 }
 
-.spec-label {
+.brochure-specs .spec-label {
     color: var(--text-light);
 }
 
-.spec-value {
+.brochure-specs .spec-value {
     color: var(--text-primary);
     font-weight: 600;
 }
 
-.product-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.product-price {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary);
-}
-
-.product-price-label {
-    font-size: 0.75rem;
-    color: var(--text-light);
-    font-weight: 400;
-}
-
-.product-cta {
-    padding: 0.5rem 1rem;
-    background: var(--secondary);
+.brochure-wa {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    padding: 0.875rem 1.25rem;
+    background: var(--primary);
     color: white;
     border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.875rem;
+    font-weight: 700;
     transition: all var(--transition-base);
 }
 
-.product-cta:hover {
+.brochure-wa:hover {
+    background: var(--primary-dark);
+}
+
+.brochure-nav {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.brochure-nav button {
+    padding: 0.625rem 1.25rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.brochure-nav button:hover:not(:disabled) {
     background: var(--secondary-dark);
-    transform: translateX(4px);
+}
+
+.brochure-nav button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.brochure-page {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
 }
 
 
@@ -1310,7 +1410,7 @@ section {
     }
     
     .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
     
     .footer-content {
@@ -1408,7 +1508,34 @@ section {
     
     /* Products */
     .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .product-image {
+        height: 140px;
+    }
+
+    /* Product brochure modal */
+    .brochure-sheet {
         grid-template-columns: 1fr;
+    }
+
+    .brochure-image {
+        min-height: 0;
+        height: 220px;
+    }
+
+    .brochure-body {
+        padding: 1.5rem;
+    }
+
+    .brochure-nav {
+        padding: 0.75rem 1rem;
+    }
+
+    .brochure-nav button {
+        padding: 0.5rem 0.875rem;
     }
     
     /* Portfolio */
