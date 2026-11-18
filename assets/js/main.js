@@ -97,7 +97,7 @@
         
         card.innerHTML = `
             <div class="product-image">
-                <img src="${product.image}" alt="${product.title}" onerror="this.src='assets/images/placeholder.jpg'">
+                <img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
                 ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
             </div>
             <div class="product-content">
@@ -173,7 +173,7 @@
         
         card.innerHTML = `
             <div class="portfolio-image">
-                <img src="${item.image}" alt="${item.title}" onerror="this.src='assets/images/placeholder.jpg'">
+                <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='assets/images/placeholder.jpg'">
             </div>
             <div class="portfolio-overlay">
                 <div class="portfolio-category">${item.category}</div>
@@ -205,6 +205,63 @@
     
     // Initial render
     renderPortfolio();
+
+    // ========================================
+    // Testimonials
+    // ========================================
+    
+    const testimonialsGrid = document.getElementById('testimonialsGrid');
+    
+    // Render testimonials
+    function renderTestimonials() {
+        if (!testimonialsGrid) return;
+        
+        testimonialsGrid.innerHTML = '';
+        
+        testimonialsData.forEach((item, index) => {
+            const testimonialCard = createTestimonialCard(item);
+            testimonialsGrid.appendChild(testimonialCard);
+            
+            // Stagger animation
+            setTimeout(() => {
+                testimonialCard.classList.add('fade-in');
+            }, index * 100);
+        });
+    }
+    
+    // Create testimonial card
+    // Avatar uses name initials only (no photos)
+    function createTestimonialCard(item) {
+        const card = document.createElement('div');
+        card.className = 'testimonial-card';
+        
+        const initials = item.name
+            .split(' ')
+            .filter(word => word && word !== 'Ir.')
+            .map(word => word.charAt(0))
+            .slice(0, 2)
+            .join('')
+            .toUpperCase();
+        
+        const stars = '★'.repeat(item.rating) + '☆'.repeat(Math.max(0, 5 - item.rating));
+        
+        card.innerHTML = `
+            <div class="testimonial-rating">${stars}</div>
+            <p class="testimonial-text">"${item.text}"</p>
+            <div class="testimonial-person">
+                <div class="testimonial-avatar">${initials}</div>
+                <div>
+                    <div class="testimonial-name">${item.name}</div>
+                    <div class="testimonial-position">${item.position}, ${item.company}</div>
+                </div>
+            </div>
+        `;
+        
+        return card;
+    }
+    
+    // Initial render
+    renderTestimonials();
 
     // ========================================
     // Contact Form
@@ -242,7 +299,7 @@ ${formData.message}
             const encodedMessage = encodeURIComponent(whatsappMessage);
             
             // WhatsApp URL (ganti dengan nomor sebenarnya)
-            const whatsappURL = `https://wa.me/6281234567890?text=${encodedMessage}`;
+            const whatsappURL = `https://wa.me/6285856457677?text=${encodedMessage}`;
             
             // Open WhatsApp
             window.open(whatsappURL, '_blank');
